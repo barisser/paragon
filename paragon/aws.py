@@ -6,6 +6,7 @@ access_key = os.environ['AWS_ACCESS_KEY']
 secret_access_key = os.environ['AWS_SECRET_ACCESS_KEY']
 DEFAULT_BUCKET = os.environ['PARAGON_BUCKET']
 
+
 def upload(identifier, contents, bucket=DEFAULT_BUCKET):
     conn = S3Connection(access_key, secret_access_key)
     bucket = conn.get_bucket(bucket)
